@@ -1,5 +1,4 @@
 #include "LPD8806.h"
-#include "SPI.h"
 
 // Example to control LPD8806-based RGB LED Modules in a strip
 
@@ -9,21 +8,18 @@
 int nLEDs = 32;
 
 // Chose 2 pins for output; can be any valid output pins:
-int dataPin  = 2;
-int clockPin = 3;
+//const int dataPin  = 2;
+//const int clockPin = 3;
 
 // First parameter is the number of LEDs in the strand.  The LED strips
 // are 32 LEDs per meter but you can extend or cut the strip.  Next two
 // parameters are SPI data and clock pins:
-LPD8806 strip = LPD8806(nLEDs, dataPin, clockPin);
+//LPD8806 strip = LPD8806(nLEDs, dataPin, clockPin);
 
 // You can optionally use hardware SPI for faster writes, just leave out
-// the data and clock pin parameters.  But this does limit use to very
-// specific pins on the Arduino.  For "classic" Arduinos (Uno, Duemilanove,
-// etc.), data = pin 11, clock = pin 13.  For Arduino Mega, data = pin 51,
-// clock = pin 52.  For 32u4 Breakout Board+ and Teensy, data = pin B2,
-// clock = pin B1.  For Leonardo, this can ONLY be done on the ICSP pins.
-//LPD8806 strip = LPD8806(nLEDs);
+// the data and clock pin parameters.
+HardwareSPI spi(1);
+LPD8806 strip = LPD8806(spi, nLEDs);
 
 void setup() {
   // Start up the LED strip

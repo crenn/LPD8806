@@ -1,3 +1,7 @@
+/*
+ * NOTE! Maple port of library currently won't allow this sketch to compile,
+ * support will be added later
+ */
 // THIS PROGRAM *WILL* *NOT* *WORK* ON REALLY LONG LED STRIPS.  IT USES
 // AN INORDINATE AMOUNT OF RAM IN ORDER TO ACHIEVE ITS BUTTERY-SMOOTH
 // ANIMATION.  See the 'strandtest' sketch for a simpler and less RAM-
@@ -16,10 +20,7 @@
 // programmers may have an easier time starting out with the 'strandtest'
 // program also included with the LPD8806 library.
 
-#include <avr/pgmspace.h>
-#include "SPI.h"
 #include "LPD8806.h"
-#include "TimerOne.h"
 
 
 #if defined(USB_SERIAL) || defined(USB_SERIAL_ADAFRUIT)
