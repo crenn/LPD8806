@@ -1,8 +1,7 @@
 # Maple library for LPD8806 #
 This Library was originally written as an arduino library for the LPD8806 PWM
-LED driver chips, strips and pixels. Work was done to port the library to the
-Leaflabs Maple platform.
-But the LPD8803/LPD8809 will probably work too.
+LED driver chips, strips and pixels. But the LPD8803/LPD8809 will probably work
+too. Work was done to port the library to the Leaflabs Maple platform.
 
 ## Where to Buy? ##
 Pick some up at [Adafruit Industries](http://www.adafruit.com/products/306)
